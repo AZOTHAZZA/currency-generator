@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>通貨生成所</title>
+  <style>
+    #balance { font-size: 24px; margin: 10px; }
+    button { font-size: 20px; margin: 5px; padding: 10px; }
+  </style>
+</head>
+<body>
+  <div id="balance">残高: 0</div>
+  <button id="mintBtn">Mint</button>
+
+  <script>
+    let currency_data = 0;
+
+    document.getElementById('mintBtn').addEventListener('click', () => {
+      // 通貨を発行
+      currency_data += 1;
+
+      // HUDに反映
+      document.getElementById('balance').innerText = '残高: ' + currency_data;
+
+      console.log('通貨発行完了:', currency_data);
+    });
+  </script>
+</body>
+</html>
